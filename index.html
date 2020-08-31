@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookLog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
+    <style text="text/css">
+        * {
+            font-family: 'Goudy Bookletter 1911', serif;
+            margin: 0;
+        }
+
+        body {
+            display: block;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 15px;
+            padding-top: 10px;
+            background-color: grey;
+            box-shadow: 0px 10px 10px rgb(95, 95, 95);
+            font-size: 200%;
+        }
+
+        header:hover {
+            background-color: rgb(159, 160, 140);
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            text-align: center;
+            background-color: rgb(95, 95, 95);
+            box-shadow: 0px 10px 10px rgb(110, 110, 110);
+            padding-left: 80px;
+            padding-right: 80px;
+            margin-bottom: 15px;
+        }
+
+        main:hover {
+            background-color: rgb(159, 160, 140);
+        }
+
+        select,
+        input,
+        button {
+            width: 600px;
+            border: 2px solid black;
+        }
+
+        select {
+            width: 150px;
+        }
+
+        button {
+            width: 150px;
+        }
+
+        .spc {
+            margin-bottom: 5px;
+            margin-top: 5px;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .spc:hover {
+            background-color: rgb(182, 182, 182);
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        #conteudo {
+            border-radius: 12px;
+            flex-direction: column;
+            border: 2px solid black;
+            flex-wrap: wrap;
+            height: 300px;
+        }
+
+        #conteudo:hover {
+            background-color: rgb(159, 160, 140);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        Search.io
+    </header>
+    <div id="x">
+        <main>
+            <select class="spc" id="selec">
+                <optgroup label="Selecione o tipo de Busca...">
+                    <option value="Geral" selected>Busca Geral</option>
+                    <option value="Nome">Busca Por Nome</option>
+                    <option value="Autor">Busca por Autor</option>
+                    <option value="Titulo">Busca Por Título</option>
+                </optgroup>
+            </select>
+            <input class="spc" type="text" id="Input" placeholder="Digite o que procura...">
+            <button class="spc" type="submit" id="srcbtn">Buscar</button>
+        </main>
+        <div>
+            <div id="conteudo"></div>
+        </div>
+    </div>
+    <script href="script.js"></script>
+</body>
+
+</html>
