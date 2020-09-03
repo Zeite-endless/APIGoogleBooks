@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookLog</title>
+    <title>Search.io</title>
     <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
     <style text="text/css">
         * {
@@ -19,7 +19,6 @@
         header {
             text-align: center;
             margin-bottom: 15px;
-            padding-top: 10px;
             background-color: grey;
             box-shadow: 0px 10px 10px rgb(95, 95, 95);
             font-size: 200%;
@@ -27,6 +26,11 @@
 
         header:hover {
             background-color: rgb(159, 160, 140);
+        }
+
+        b:hover {
+            color: white;
+            cursor: pointer;
         }
 
         main {
@@ -76,41 +80,282 @@
         }
 
         #conteudo {
-            border-radius: 12px;
-            flex-direction: column;
-            border: 2px solid black;
+            display: flex;
+            justify-content: space-between;
             flex-wrap: wrap;
-            height: 300px;
+            font-size: 20px;
+            height: 76.1vh;
+            overflow: auto;
         }
 
-        #conteudo:hover {
-            background-color: rgb(159, 160, 140);
+        .all {
+            border: 2px solid rgb(255, 255, 255);
+            box-shadow: 0px 0px 10px black;
+            width: 100%;
+            margin-bottom: 10px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 12px;
+            color: white;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .all:hover {
+            box-shadow: 0px 0px 10px rgb(255, 255, 255);
+            text-shadow: 0px 0px 10px rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+            border: 2px solid black;
+            color: rgb(0, 0, 0);
+            transition: all 1s ease;
+            -webkit-transition-delay: all 1s ease;
+            -moz-transition-delay: all 1s ease;
+            -ms-transition-delay: all 1s ease;
+            -o-transition-delay: all 1s ease;
+        }
+
+        #moreinfo:hover {
+            color: rgb(76, 167, 136)
+        }
+
+
+        footer {
+            background-color: rgb(95, 95, 95);
+        }
+
+        footer:hover {
+            background-color: rgb(159, 160, 140)
+        }
+
+        a {
+            color: rgb(55, 0, 255);
+            text-decoration: none;
+            text-shadow: 0px 0px 2px rgb(255, 0, 0);
+        }
+
+        a:hover {
+            color: rgb(0, 60, 255);
+        }
+
+        #moreinfo {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 250px;
+            padding-right: 250px;
+        }
+
+        #desc {
+            font-size: 60%;
+            text-align: center;
+        }
+
+        #conteudo #load{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: black;
+        }
+
+        #conteudo #load img{
+            width: 50%; 
+        }
+
+        @media only screen and (min-width: 437px) and (max-width: 837px) {
+            main {
+                display: flex;
+                justify-content: space-between;
+                background-color: rgb(95, 95, 95);
+                box-shadow: 0px 10px 10px rgb(110, 110, 110);
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            input {
+                margin-top: 2px;
+                width: 250px;
+            }
+
+            button {
+                width: 160px;
+                margin-top: 2px;
+            }
+
+            select {
+                width: 150px;
+                height: 40px;
+                margin-right: 10px;
+                margin-top: 10px;
+                margin-left: 0;
+                padding-left: 0px;
+            }
+
+            #conteudo {
+                height: 78vh;
+            }
+        }
+
+        @media only screen and (max-width: 436px) {
+            main {
+                display: flex;
+                justify-content: space-between;
+                background-color: rgb(95, 95, 95);
+                box-shadow: 0px 10px 10px rgb(110, 110, 110);
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            input {
+                margin-top: 2px;
+                width: 150px;
+            }
+
+            button {
+                width: 120px;
+                margin-top: 2px;
+            }
+
+            select {
+                width: 110px;
+                height: 40px;
+                margin-right: 10px;
+                margin-top: 10px;
+                margin-left: 0;
+                padding-left: 0px;
+            }
+
+            #conteudo {
+                height: 78vh;
+            }
+        }
+
+        @media only screen and (min-width: 838px) and (max-width: 850) {
+            main {
+                display: flex;
+                justify-content: space-between;
+                background-color: rgb(95, 95, 95);
+                box-shadow: 0px 10px 10px rgb(110, 110, 110);
+                padding-left: 20px;
+                padding-right: 20px;
+                height: 8vh;
+                padding-top: 20px;
+            }
+
+            input {
+                width: 350px;
+                height: 45px;
+                font-size: 200%;
+            }
+
+            button {
+                width: 360px;
+                font-size: 200%;
+                margin-top: 2px;
+                height: 45px;
+            }
+
+            select {
+                width: 300px;
+                height: 100px;
+                font-size: 200%;
+                margin-right: 10px;
+                margin-left: 80px;
+                padding-left: 0px;
+
+            }
+
+            #conteudo {
+                height: 86vh;
+            }
+
+            img {
+                width: 40%;
+            }
+
+            .hi {
+                font-size: 200%;
+            }
+        }
+
+        @media only screen and (max-width: 876px) and (min-width: 0px) {
+            #moreinfo {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
+
+        @media only screen and (max-width: 621px) and (min-width: 288px) {
+            #conteudo {
+                height: 84vh;
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
-        Search.io
+        <b>Search.io</b>
     </header>
     <div id="x">
         <main>
             <select class="spc" id="selec">
                 <optgroup label="Selecione o tipo de Busca...">
-                    <option value="Geral" selected>Busca Geral</option>
-                    <option value="Nome">Busca Por Nome</option>
-                    <option value="Autor">Busca por Autor</option>
+                    <option value="search" selected>Busca Geral</option>
+                    <option value="intitle">Busca Por Nome</option>
+                    <option value="inauthor">Busca por Autor</option>
                     <option value="Titulo">Busca Por Título</option>
+                    <option value="inpublisher">Busca por Publicadora</option>
+                    <option value="subject">Lista do Volume</option>
+                    <option value="isbn">Busca Por ISBN</option>
+                    <option value="lccn">Busca Por LCCN</option>
+                    <option value="oclc">Busca Por OCLC</option>
                 </optgroup>
             </select>
-            <input class="spc" type="text" id="Input" placeholder="Digite o que procura...">
-            <button class="spc" type="submit" id="srcbtn">Buscar</button>
+            <div><input class="spc" type="text" id="Input" placeholder="Digite o que procura...">
+                <button class="spc" type="submit" id="srcbtn" onclick="loadlivros(this.value)">Buscar</button></div>
         </main>
         <div>
-            <div id="conteudo"></div>
+            <div id="conteudo">
+            </div>
         </div>
     </div>
-    <script href="script.js"></script>
+    <footer align="center"><b>Sobre</b></footer>
+    <script>
+        function loadlivros() {
+            document.getElementById("conteudo").innerHTML = ""
+            document.getElementById('conteudo').innerHTML = `<div id="load"><img src="https://miro.medium.com/max/1600/1*e_Loq49BI4WmN7o9ItTADg.gif"></div>`;
+
+            const xhr1 = new XMLHttpRequest();
+
+            var busca = document.getElementById("Input").value
+            var tipo = document.getElementById("selec").value
+
+            xhr1.open("GET",
+                `https://www.googleapis.com/books/v1/volumes?q=+${tipo}:${busca}&key=AIzaSyByRTlliIKCn19yuOCQOdRZUjhz1gGYBa4`
+            );
+
+            xhr1.onreadystatechange = function () {
+                if (xhr1.status = 200 && xhr1.readyState == 4) {
+
+                    let dadosJSONText = xhr1.responseText
+                    let info = JSON.parse(dadosJSONText)
+
+                    for (let i = 0; i <= info.items.length; i++) {
+                        document.getElementById("load").innerHTML = ""
+                        document.getElementById("conteudo").innerHTML +=
+                            `<div class="all" align="center"><div id="show"></div><img id="thumbnail" onload="verify()" src="${info.items[i].volumeInfo.imageLinks.thumbnail}"><br><p id="title"  class="hi" onload="verify()">Titulo: ${info.items[i].volumeInfo.title}</p><p id="subt" onload="verify()" class="hi">Subtitulo: ${info.items[i].volumeInfo.subtitle}</p><p>Categoria: ${info.items[i].volumeInfo.categories}</p><p id="autor" onload="verify()" class="hi">Autor: ${info.items[i].volumeInfo.authors}</p><p id="date" onload="verify()" class="hi">Data de Publicação: ${info.items[i].volumeInfo.publishedDate}</p><p id="desc">Descrição: ${info.items[i].volumeInfo.description}</p><div id="moreinfo"><a id="apilivro" target="_blank" href="${info.items[i].selfLink}">API do Livro</a><a href="${info.items[i].volumeInfo.infoLink}" target="_blank">Mais Informações</a> <a href="${info.items[i].saleInfo.buyLink}" target="_blank">Link de Compra</a></div></div>`
+                    }
+                }
+            }
+            xhr1.send();
+        }
+    </script>
+    <script>
+        document.getElementById("Input").addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("srcbtn").click();
+            }
+        });
+    </script>
 </body>
 
 </html>
